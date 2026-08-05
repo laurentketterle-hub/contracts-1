@@ -2094,7 +2094,7 @@ fn check_deposit_lock(env: &Env, address: &Address) {
         .persistent()
         .get::<_, u64>(&VaultKey::LastDeposit(address.clone()))
     {
-        let window: u32 = env
+        let _window: u32 = env
             .storage()
             .instance()
             .get(&VaultKey::WithdrawalWindowLedgers)
